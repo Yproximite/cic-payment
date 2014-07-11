@@ -1,6 +1,6 @@
 <?php
 
-namespace Yproximite\cic-payment\PaymentSystem;
+namespace Yproximite\cicPayment\PaymentSystem;
 
 /**
  * Class CmcicTpe

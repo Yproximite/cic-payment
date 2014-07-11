@@ -1,8 +1,8 @@
 <?php
 
-namespace Yproximite\cic-payment\PaymentSystem;
+namespace Yproximite\cicPayment\PaymentSystem;
 
-use yProxSite\cic-payment\CmcicTpe;
+use yProxSite\cicPayment\CmcicTpe;
 
 class CmcicHash
 {

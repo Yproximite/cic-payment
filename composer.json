@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Yproximtie\\cic-payment": ""
+            "Yproximtie\\cicPayment": ""
         }
     },
     "target-dir": "yProxSite/cic-payment"
