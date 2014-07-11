@@ -7,6 +7,14 @@ namespace Yproximite\cicPayment\PaymentSystem;
  */
 class CmcicTpe
 {
+    const CMCIC_SERVEUR_TEST = "https://ssl.paiement.cic-banques.fr/test/";
+    const CMCIC_SERVEUR      = "https://paiement.creditmutuel.fr/";
+    const CMCIC_URLPAIEMENT  = "paiement.cgi";
+
+    const CMCIC_CGI1_FIELDS = "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s";
+    const CMCIC_CTLHMAC     = "V1.04.sha1.php--[CtlHmac%s%s]-%s";
+    const CMCIC_CTLHMACSTR  = "CtlHmac%s%s";
+
     /**
      * Version du TPE - TPE Version (Ex : 3.0)
      *
@@ -58,21 +66,26 @@ class CmcicTpe
     /**
      * @param string $sLangue
      */
-    function __construct($sLangue = "FR")
+    function __construct($sCle, $sVersion, $sNumero, $urlPaiment, $sCodeSociete, $sUrlOK, $sUrlKO, $sLangue, $isTest = false)
     {
         $aRequiredConstants = array('CMCIC_CLE', 'CMCIC_VERSION', 'CMCIC_TPE', 'CMCIC_CODESOCIETE');
         $this->_checkTpeParams($aRequiredConstants);
 
-        $this->sVersion     = CMCIC_VERSION;
-        $this->_sCle        = CMCIC_CLE;
-        $this->sNumero      = CMCIC_TPE;
-        $this->sUrlPaiement = CMCIC_SERVEUR . CMCIC_URLPAIEMENT;
+        $this->sVersion = $sVersion;
+        $this->_sCle    = $sCle;
+        $this->sNumero  = $sNumero;
 
-        $this->sCodeSociete = CMCIC_CODESOCIETE;
+        if ($isTest) {
+            $this->sUrlPaiement = CMCIC_SERVEUR_TEST . CMCIC_URLPAIEMENT;
+        } else {
+            $this->sUrlPaiement = CMCIC_SERVEUR . CMCIC_URLPAIEMENT;
+        }
+
+        $this->sCodeSociete = $sCodeSociete;
         $this->sLangue      = $sLangue;
 
-        $this->sUrlOK = CMCIC_URLOK;
-        $this->sUrlKO = CMCIC_URLKO;
+        $this->sUrlOK = $sUrlOK;
+        $this->sUrlKO = $sUrlKO;
     }
 
     /**
@@ -82,21 +95,6 @@ class CmcicTpe
      */
     public function getCle()
     {
-
         return $this->_sCle;
-    }
-
-    /**
-     * Contrôle l'existence des constantes d'initialisation du TPE
-     * Check for the initialising constants of the TPE
-     *
-     * @param array $aConstants
-     */
-    private function _checkTpeParams($aConstants)
-    {
-
-        for ($i = 0; $i < count($aConstants); $i++)
-            if (!defined($aConstants[$i]))
-                die ("Erreur paramètre " . $aConstants[$i] . " indéfini");
     }
 }

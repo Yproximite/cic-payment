@@ -32,7 +32,6 @@ class CmcicHash
      */
     private function _getUsableKey($oTpe)
     {
-
         $hexStrKey = substr($oTpe->getCle(), 0, 38);
         $hexFinal  = "" . substr($oTpe->getCle(), 38, 2) . "00";
 
@@ -46,7 +45,6 @@ class CmcicHash
             else
                 $hexStrKey .= substr($hexFinal, 0, 2);
         }
-
 
         return pack("H*", $hexStrKey);
     }
