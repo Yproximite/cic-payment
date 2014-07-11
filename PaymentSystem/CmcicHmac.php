@@ -1,8 +1,6 @@
 <?php
 
-namespace Yproximite\cicPayment\PaymentSystem;
-
-use Yproximite\cicPayment\PaymentSystem\CmcicTpe;
+namespace Yproximite\CicPayment\PaymentSystem;
 
 class CmcicHash
 {
@@ -12,7 +10,6 @@ class CmcicHash
      * @var string
      */
     private $_sUsableKey;
-
 
     /**
      * @param CmcicTpe $oTpe
