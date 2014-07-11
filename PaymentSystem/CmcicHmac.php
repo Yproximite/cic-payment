@@ -2,7 +2,7 @@
 
 namespace Yproximite\cicPayment\PaymentSystem;
 
-use yProxSite\cicPayment\CmcicTpe;
+use Yproximite\cicPayment\PaymentSystem\CmcicTpe;
 
 class CmcicHash
 {
