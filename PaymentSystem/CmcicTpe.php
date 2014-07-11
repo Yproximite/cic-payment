@@ -54,19 +54,26 @@ class CmcicTpe
      *
      * @var string
      */
-    public $sUrlPaiement; //
+    public $sUrlPaiement;
 
     /**
      * // La clé - The Key
      *
      * @var string
      */
-    private $_sCle; // La cl� - The Key
+    private $_sCle;
 
     /**
+     * @param string $sCle
+     * @param string $sVersion
+     * @param string $sNumero
+     * @param string $sCodeSociete
+     * @param string $sUrlOK
+     * @param string $sUrlKO
      * @param string $sLangue
+     * @param bool $isTest
      */
-    function __construct($sCle, $sVersion, $sNumero, $urlPaiment, $sCodeSociete, $sUrlOK, $sUrlKO, $sLangue, $isTest = false)
+    function __construct($sCle, $sVersion, $sNumero, $sCodeSociete, $sUrlOK, $sUrlKO, $sLangue, $isTest = false)
     {
         $aRequiredConstants = array('CMCIC_CLE', 'CMCIC_VERSION', 'CMCIC_TPE', 'CMCIC_CODESOCIETE');
         $this->_checkTpeParams($aRequiredConstants);
