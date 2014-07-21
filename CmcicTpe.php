@@ -71,21 +71,18 @@ class CmcicTpe
      * @param string $sUrlOK
      * @param string $sUrlKO
      * @param string $sLangue
-     * @param bool $isTest
+     * @param bool   $isTest
      */
     function __construct($sCle, $sVersion, $sNumero, $sCodeSociete, $sUrlOK, $sUrlKO, $sLangue, $isTest = false)
     {
-        $aRequiredConstants = array('CMCIC_CLE', 'CMCIC_VERSION', 'CMCIC_TPE', 'CMCIC_CODESOCIETE');
-        $this->_checkTpeParams($aRequiredConstants);
-
         $this->sVersion = $sVersion;
         $this->_sCle    = $sCle;
         $this->sNumero  = $sNumero;
 
         if ($isTest) {
-            $this->sUrlPaiement = CMCIC_SERVEUR_TEST . CMCIC_URLPAIEMENT;
+            $this->sUrlPaiement = self::CMCIC_SERVEUR_TEST . self::CMCIC_URLPAIEMENT;
         } else {
-            $this->sUrlPaiement = CMCIC_SERVEUR . CMCIC_URLPAIEMENT;
+            $this->sUrlPaiement = self::CMCIC_SERVEUR . self::CMCIC_URLPAIEMENT;
         }
 
         $this->sCodeSociete = $sCodeSociete;

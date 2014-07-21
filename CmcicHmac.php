@@ -2,7 +2,7 @@
 
 namespace Yproximite\CicPayment;
 
-class CmcicHash
+class CmcicHmac
 {
     /**
      * La clé du TPE en format opérationnel / The usable TPE key
