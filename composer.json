@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Yproximite\\CicPayment": ""
+            "Yproximite\\CicPayment": "lib/"
         }
     },
     "target-dir": "Yproximite/CicPayment"
