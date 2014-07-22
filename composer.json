@@ -1,6 +1,7 @@
 {
     "name": "yproximite/cic-payment",
     "description": "Cic Pa@yment",
+    "type": "library",
     "authors": [
         {
             "name": "Cic Pa@yment",
@@ -11,8 +12,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Yproximite\\CicPayment": "lib/"
+            "CicPayment": "lib/"
         }
-    },
-    "target-dir": "Yproximite/CicPayment"
+    }
 }

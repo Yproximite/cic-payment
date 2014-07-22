@@ -1,6 +1,6 @@
 <?php
 
-namespace Yproximite\CicPayment;
+namespace CicPayment;
 
 class CmcicHmac
 {
