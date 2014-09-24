@@ -102,18 +102,4 @@ class CmcicTpe
     {
         return $this->_sCle;
     }
-
-    /**
-     * @return array
-     */
-    public function getMethode()
-     {
-         if ($_SERVER["REQUEST_METHOD"] == "GET")
-             return $_GET;
-
-         if ($_SERVER["REQUEST_METHOD"] == "POST")
-             return $_POST;
-
-         die ('Invalid REQUEST_METHOD (not GET, not POST).');
-     }
 }
