@@ -12,6 +12,7 @@ class CmcicTpe
     const CMCIC_URLPAIEMENT  = "paiement.cgi";
 
     const CMCIC_CGI1_FIELDS = "%s*%s*%s%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s";
+    const CMCIC_CGI2_FIELDS = "%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*%s*";
     const CMCIC_CTLHMAC     = "V1.04.sha1.php--[CtlHmac%s%s]-%s";
     const CMCIC_CTLHMACSTR  = "CtlHmac%s%s";
 
