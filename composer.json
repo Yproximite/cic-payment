@@ -1,6 +1,7 @@
 {
     "name": "yproximite/cic-payment",
     "description": "Cic Pa@yment",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
